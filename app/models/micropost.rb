@@ -3,5 +3,8 @@ class Micropost < ActiveRecord::Base
 
   belongs_to :user
 
-  validates :content, :length => { :maximum => 5 }
+  validates :content, :length => { :minimum => 5, :maximum => 25 }
+
+
+
 end
